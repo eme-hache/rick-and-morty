@@ -1,0 +1,51 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:create": "npx sequelize-cli db:create --env ${DB_ENV:-development}",
+    "db:migrate": "npx sequelize-cli db:migrate --env ${DB_ENV:-development}",
+    "db:migrate:undo": "npx sequelize-cli db:migrate:undo --env ${DB_ENV:-development}",
+    "db:migrate:undo:all": "npx sequelize-cli db:migrate:undo:all --env ${DB_ENV:-development}",
+    "db:seed": "npx sequelize-cli db:seed:all --env ${DB_ENV:-development}",
+    "db:drop": "npx sequelize-cli db:drop --env ${DB_ENV:-development}",
+    "db:reset": "npm run db:drop && npm run db:create && npm run db:migrate && npm run db:seed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@apollo/server": "^5.1.0",
+    "@apollo/subgraph": "^2.11.3",
+    "@as-integrations/express5": "^1.1.2",
+    "cors": "^2.8.5",
+    "dataloader": "^2.2.3",
+    "dotenv-flow": "^4.1.0",
+    "express": "^5.1.0",
+    "graphql": "^16.12.0",
+    "graphql-tag": "^2.12.6",
+    "ioredis": "^5.8.2",
+    "node-cron": "^4.2.1",
+    "pg": "^8.16.3",
+    "pg-hstore": "^2.3.4",
+    "reflect-metadata": "^0.2.2",
+    "sequelize": "^6.37.7"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/graphql": "^14.2.3",
+    "@types/ioredis": "^4.28.10",
+    "@types/node": "^24.9.2",
+    "@types/node-cron": "^3.0.11",
+    "@types/sequelize": "^4.28.20",
+    "nodemon": "^3.1.10",
+    "sequelize-cli": "^6.6.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
