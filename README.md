@@ -1,5 +1,7 @@
 # Backend envs example
 
+
+
 - NODE_ENV=development
 
 - DB_HOST=localhost
@@ -22,6 +24,7 @@
 
 ## Backend
 
+- It´s necessary to have postgres and redis installed or use docker
 - npm i
 - npm run db:reset
 - npm run dev
