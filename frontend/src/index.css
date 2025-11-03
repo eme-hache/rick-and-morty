@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@theme {
+  --color-primary-100: #eee3ff;
+  --color-primary-600: #8054c7;
+  --color-primary-700: #5a3696;
+  --color-secondary-600: #63d838;
+}
